@@ -8,4 +8,8 @@ class BDayReminders(models.Model):
 
   name = models.CharField(max_length=100, null=False, blank=False)
   email = models.EmailField(max_length=150, null=False, blank=False)
-  dateofbirth = models.DateTimeField()
+  dateofbirth = models.DateField()
+
+
+  def __str__(self):
+    return self.name
