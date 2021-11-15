@@ -15,21 +15,21 @@ def index(request):
   }
 
 # Start 
-def contact(request):
-  if request.method == "POST":
-    message_name = request.POST['message-name']
-    message_email = request.POST['message-email']
-    message = request.POST['message']
+#def contact(request):
+ # if request.method == "POST":
+  #  message_name = request.POST['message-name']
+  #  message_email = request.POST['message-email']
+  #  message = request.POST['message']
 
     # send an email on Birthday!
-    send_mail(
-      message_name, # subject
-      message, # message
-      message_email, # from email
-      ['rogueangelimage@gmail.com'], # to email
-    )
+  #  send_mail(
+  #    message_name, # subject
+   #   message, # message
+  #    message_email, # from email
+  #    ['rogueangelimage@gmail.com'], # to email
+  #  )
 
-  return render(request, 'contact.html', {'message_name': message_name,})
+  #return render(request, 'contact.html', {'message_name': message_name,})
 # End
   
   return render(request, template, context)
